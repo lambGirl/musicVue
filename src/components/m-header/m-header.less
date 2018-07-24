@@ -1,0 +1,37 @@
+@import "../../common/less/variable";
+@import "../../common/less/mixin";
+@image:'../../components/m-header/';
+.m-header{
+  position: relative;
+  height: 88px;
+  text-align: center;
+  color: @color-theme;
+  font-size: 0;
+  .icon{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 12px;
+    width: 60px;
+    height: 64px;
+    margin-right: 18px;
+    .bg-image(@image,logo);
+    background-size: 60px 62px;
+  }
+  .text{
+    display: inline-block;
+    vertical-align: top;
+    line-height: 88px;
+    font-size: @font-size-large;
+  }
+  .mine{
+    position: absolute;
+    top: 0;
+    right: 0;
+    .icon-mine{
+      display: block;
+      padding: 24px;
+      font-size: 40px;
+      color: @color-theme;
+    }
+  }
+}

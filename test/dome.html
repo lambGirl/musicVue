@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    #content{
+        width: 1200px;
+        display: flex;
+        height: 100%;
+        margin:400px auto;
+    }
+    .app{
+        width: 100px;
+        height: 100px;
+        background-color: #00d;
+        background-image: url('./gp.png');
+        background-size:100px 100px;
+        transform:  rotate(45deg);
+        background-position: center center;
+    }
+    .app:nth-child(2){
+        transform: translate(0,-180px) rotate(45deg);
+    }
+    .app:nth-child(3){
+        transform: translate(0,-360px) rotate(45deg);
+    }
+    .app:nth-child(4){
+        transform: translate(0,-180px) rotate(45deg);
+    }
+    .app:nth-child(6){
+        transform: translate(0,-180px) rotate(45deg);
+    }
+    .app:nth-child(7){
+        transform: translate(0,-360px) rotate(45deg);
+    }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div class="app"></div>
+        <div class="app"></div>
+        <div class="app"></div>
+        <div class="app"></div>
+        <div class="app"></div>
+        <div class="app"></div>
+        <div class="app"></div>
+    </div>
+</body>
+<script>
+    function calculateDeg(angle){
+        var pi =Math.PI;
+        return (angle*pi)/180;
+    }
+    var widthSlef= 200;
+    var angle = 45;
+    var degrees =Math.sin(calculateDeg(angle));
+    var OTest =document.querySelector('#test1');
+    var a=  100*(degrees*2-1);
+    var b=  100*(degrees*2+1);
+</script>
+</html>

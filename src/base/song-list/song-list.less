@@ -1,0 +1,52 @@
+@import "../../common/less/variable";
+@import "../../common/less/mixin";
+
+@imageUrl: '../../base/song-list/';
+.song-list {
+  .item {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 128px;
+    font-size: @font-size-medium;
+    .rank {
+      flex: 0 0 50px;
+      width: 50px;
+      margin-right: 60px;
+      text-align: center;
+      .icon {
+        display: inline-block;
+        width: 50px;
+        height: 48px;
+        background-size: 50px 50px;
+        &.icon0 {
+          .bg-image(@imageUrl, first)
+        }
+        &.icon1 {
+          .bg-image(@imageUrl, second)
+        }
+        &.icon2 {
+          .bg-image(@imageUrl, third)
+        }
+      }
+      .text {
+        color: @color-theme;
+        font-size: @font-size-large;
+      }
+    }
+    .content {
+      flex: 1;
+      line-height: 40px;
+      overflow: hidden;
+      .name {
+        color: @color-text;
+        .no-wrap();
+      }
+      .desc {
+        .no-wrap();
+        margin-top: 4px;
+        color: @color-text-d;
+      }
+    }
+  }
+}
